@@ -27,17 +27,18 @@ void Player::move(float deltaTime) {
 
 	else {
 		double x = rand() / static_cast<double>(RAND_MAX + 1);
-		int randomNumber = 1 + static_cast<int>(x * (4 - 1));
+		int randomNumber = 1 + static_cast<int>(x * (8 - 1));
+		int rx = std::rand() % 4 + 1;
 
 		float thrustShift = 0;
 
 		if (randomNumber == 1) {
-			thrustShift = 2.5f;
+			thrustShift = rx;
 		}
 		else if (randomNumber == 2) {
-			thrustShift = -2.5f;
+			thrustShift = -rx;
 		}
-
+		std::cout << thrustShift << std::endl;
 		changePosition(dx, thrustShift, dz);
 	}
 }

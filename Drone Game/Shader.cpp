@@ -18,7 +18,6 @@ void Shader::compile(const GLchar *vs, const GLchar *fs, const GLchar *gs) {
 
 	//Compile the vertex shader
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	std::cout << "here" << std::endl;
 
 	glShaderSource(vertexShader, 1, &vs, NULL);
 	glCompileShader(vertexShader);

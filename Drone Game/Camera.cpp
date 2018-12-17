@@ -38,7 +38,7 @@ void Camera::calculateCameraPosition(GLfloat horizDistance, GLfloat verticDistan
 
 	if (state == TOP_DOWN) {
 		pitch = 90.0f;
-		distanceFromPlayer = 95.00f;
+		distanceFromPlayer = 150.00f;
 		GLfloat theta = player.rotation.y + 0;
 		GLfloat offsetX = horizDistance * sin(glm::radians(theta));
 		GLfloat offsetZ = horizDistance * cos(glm::radians(theta));

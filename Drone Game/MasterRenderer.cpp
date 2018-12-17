@@ -60,7 +60,6 @@ void MasterRenderer::render(std::vector<GameObject> &entities, std::vector<GameO
 	terrainShader.setVector3f("lightColour", light.colour);
 	terrainShader.setFloat("shine", terrainList[0].shine);
 	terrainShader.setFloat("reflection", terrainList[0].reflection);
-	std::cout << terrainList.size() << std::endl;
 
 	terrainRenderer.render(terrainList); //this
 
